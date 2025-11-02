@@ -4,7 +4,7 @@ Dans ce projet je vais présenté une solution complète d’entreposage de donn
 
 
 ----
-### Exigences du projet <img width="42" height="42" alt="image" src="https://github.com/user-attachments/assets/a77325eb-09d7-4d6a-9e17-8d947ea7abbf" />
+### Exigences du projet <img width="32" height="32" alt="image" src="https://github.com/user-attachments/assets/a77325eb-09d7-4d6a-9e17-8d947ea7abbf" />
 
 
 #### **1. Construction de l’entrepôt de données (Data Engineering)**
