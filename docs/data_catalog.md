@@ -8,7 +8,7 @@ Elle est composée de **tables de dimensions** et de **tables de faits**, constr
 
 ### 1. **gold.dim_customers**
 - **Objectif:** Stocke les informations clients enrichies avec des données démographiques et géographiques.
-- **Columns:**
+- **Colonnes:**
 
 | Column Name      | Data Type     | Description                                                                                   |
 |------------------|---------------|-----------------------------------------------------------------------------------------------|
@@ -26,37 +26,37 @@ Elle est composée de **tables de dimensions** et de **tables de faits**, constr
 ---
 
 ### 2. **gold.dim_products**
-- **Purpose:** Provides information about the products and their attributes.
-- **Columns:**
+- **Objectif:** Fournit des informations sur les produits et leurs attributs.
+- **Colonnes:**
 
 | Column Name         | Data Type     | Description                                                                                   |
 |---------------------|---------------|-----------------------------------------------------------------------------------------------|
-| product_key         | INT           | Surrogate key uniquely identifying each product record in the product dimension table.         |
-| product_id          | INT           | A unique identifier assigned to the product for internal tracking and referencing.            |
-| product_number      | NVARCHAR(50)  | A structured alphanumeric code representing the product, often used for categorization or inventory. |
-| product_name        | NVARCHAR(50)  | Descriptive name of the product, including key details such as type, color, and size.         |
-| category_id         | NVARCHAR(50)  | A unique identifier for the product's category, linking to its high-level classification.     |
-| category            | NVARCHAR(50)  | The broader classification of the product (e.g., Bikes, Components) to group related items.  |
-| subcategory         | NVARCHAR(50)  | A more detailed classification of the product within the category, such as product type.      |
-| maintenance_required| NVARCHAR(50)  | Indicates whether the product requires maintenance (e.g., 'Yes', 'No').                       |
-| cost                | INT           | The cost or base price of the product, measured in monetary units.                            |
-| product_line        | NVARCHAR(50)  | The specific product line or series to which the product belongs (e.g., Road, Mountain).      |
-| start_date          | DATE          | The date when the product became available for sale or use, stored in|
+| product_key         | INT           | Clé de substitution identifiant de manière unique chaque produit dans la table de dimension.         |
+| product_id          | INT           | Identifiant unique attribué au produit pour le suivi interne.            |
+| product_number      | NVARCHAR(50)  | Code alphanumérique structuré représentant le produit, souvent utilisé pour la catégorisation ou l’inventaire. |
+| product_name        | NVARCHAR(50)  | Nom descriptif du produit, incluant des détails comme le type, la couleur et la taille.      |
+| category_id         | NVARCHAR(50)  | Identifiant unique de la catégorie du produit, lié à sa classification générale.    |
+| category            | NVARCHAR(50)  | Classification générale du produit (ex. : Bikes, Components) permettant de regrouper des articles similaires.  |
+| subcategory         | NVARCHAR(50)  | Classification détaillée du produit au sein de la catégorie.     |
+| maintenance_required| NVARCHAR(50)  | Indique si le produit nécessite une maintenance (ex. : « Yes », « No »).                       |
+| cost                | INT           | Coût ou prix de base du produit, exprimé en unités monétaires.                           |
+| product_line        | NVARCHAR(50)  | Ligne ou série de produits à laquelle le produit appartient (ex. : Road, Mountain).    |
+| start_date          | DATE          | Date à laquelle le produit est devenu disponible à la vente ou à l’utilisation.|
 
 ---
 
 ### 3. **gold.fact_sales**
-- **Purpose:** Stores transactional sales data for analytical purposes.
-- **Columns:**
+- **Objectif:** Stocke les données transactionnelles de ventes à des fins analytiques.
+- **Colonnes:**
 
 | Column Name     | Data Type     | Description                                                                                   |
 |-----------------|---------------|-----------------------------------------------------------------------------------------------|
-| order_number    | NVARCHAR(50)  | A unique alphanumeric identifier for each sales order (e.g., 'SO54496').                      |
-| product_key     | INT           | Surrogate key linking the order to the product dimension table.                               |
-| customer_key    | INT           | Surrogate key linking the order to the customer dimension table.                              |
-| order_date      | DATE          | The date when the order was placed.                                                           |
-| shipping_date   | DATE          | The date when the order was shipped to the customer.                                          |
-| due_date        | DATE          | The date when the order payment was due.                                                      |
-| sales_amount    | INT           | The total monetary value of the sale for the line item, in whole currency units (e.g., 25).   |
-| quantity        | INT           | The number of units of the product ordered for the line item (e.g., 1).                       |
-| price           | INT           | The price per unit of the product for the line item, in whole currency units (e.g., 25).      |
+| order_number    | NVARCHAR(50)  | Identifiant alphanumérique unique pour chaque commande (ex. : « SO54496 »).                     |
+| product_key     | INT           | Clé de substitution reliant la commande à la dimension produits.                               |
+| customer_key    | INT           | Clé de substitution reliant la commande à la dimension clients.                             |
+| order_date      | DATE          | Date à laquelle la commande a été passée.                                                         |
+| shipping_date   | DATE          | Date à laquelle la commande a été expédiée au client.                                      |
+| due_date        | DATE          | Date d’échéance du paiement de la commande.                                                     |
+| sales_amount    | INT           | Valeur monétaire totale de la vente pour la ligne, en unités entières (ex. : 25).   |
+| quantity        | INT           | Quantité de produits commandés pour la ligne (ex. : 1).                       |
+| price           | INT           | Prix unitaire du produit pour la ligne, en unités monétaires (ex. : 25).      |
