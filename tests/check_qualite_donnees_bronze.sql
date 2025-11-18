@@ -3,7 +3,7 @@
 Contrôles de Qualité
 ===============================================================================
 Objectif du script :
-    Ce script effectue des contrôles de qualité afin de valider l’intégrité, 
+    Dans ce script j'effectue des contrôles de qualité afin de valider l’intégrité, 
     la cohérence et l’exactitude de la couche Gold. Ces vérifications garantissent :
     - L’unicité des clés substitutives dans les tables de dimensions.
     - L’intégrité référentielle entre les tables de faits et de dimensions.
