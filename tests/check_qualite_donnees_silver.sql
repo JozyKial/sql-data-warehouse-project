@@ -3,7 +3,7 @@
 Contrôles de Qualité
 ===============================================================================
 Objectif du script :
-    Ce script effectue divers contrôles de qualité afin de vérifier la cohérence,
+    Dans ce script j'effectue divers contrôles de qualité afin de vérifier la cohérence,
     l’exactitude et la standardisation des données dans la couche 'silver'.
     Il inclut des vérifications concernant :
     - Les clés primaires NULL ou dupliquées.
